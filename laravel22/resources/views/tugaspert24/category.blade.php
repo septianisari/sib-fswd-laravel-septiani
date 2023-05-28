@@ -56,7 +56,6 @@ https://templatemo.com/tm-545-finance-business
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-behance"></i></a></li>
             </ul>
           </div>
         </div>
@@ -64,41 +63,40 @@ https://templatemo.com/tm-545-finance-business
     </div>
 
     <header class="">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg" style="background-color : green">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Arkatama Store Laravel</h2></a>
+          <a class="navbar-brand" href="index.html"><h2>SEPTI STORE</h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
 
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('landing')}}">Home</a>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url('landing')}}">HOME</a>
               </li>  
-            <li class="nav-item active">
+
+              <li class="nav-item active">
               <div class="dropdown">
                 <button class="btn btn-transparent dropdown-toggle nav-link" style="color: white;outline:none; background-color: transparent" type="button" data-toggle="dropdown">Dashboard
                 <span class=" caret"></span></button>
                 <ul class="dropdown-menu">
-                  <li><a style="color:greenyellow" href="{{url('category')}}">Produk Kategori</a></li>
-                  <li><a style="color:greenyellow" href="{{url('dproduk')}}">Daftar Produk</a></li>
-                  <li><a style="color:greenyellow" href="{{url('grup')}}"> Grup Pengguna</a></li>
-                  <li><a style="color:greenyellow" href="{{url('pengguna')}}">DaftarPengguna</a></li>
+                <li><a style="color:greenyellow" href="{{url('category')}}">CATEGORIES</a></li>
+                  <li><a style="color:greenyellow" href="{{url('dproduk')}}">GROUP</a></li>
+                  <li><a style="color:greenyellow" href="{{url('grup')}}"> ALBUM</a></li>
                 </ul>
               </div>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="about.html">FAQ</a>
               </li>  
               <li class="nav-item">
-                <a class="nav-link" href="services.html">Our Services</a>
+                <a class="nav-link" href="services.html">HELP</a>
               </li>                          
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.html">SUPPORT</a>
               </li>
-           
             </ul>
           </div>
         </div>
@@ -107,37 +105,35 @@ https://templatemo.com/tm-545-finance-business
 
     <!-- Page Content -->
     <!-- Banner Starts Here -->
-    
     <div class="main-banner header-text" id="top">
-        <div class="Modern-Slider">
-          <!-- Item -->
-          <div class="item item-1">
-            <div class="img-fill">
-                <div class="text-content">
-                  <h6>Hallo. Selamat Datang</h6>
-                  <h4>Ini Tugasnya<br> {{$namamhs}}</h4>
-                  <p>{{$deskripsi}}</p>
-                  <a href="{{url('category')}}" class="filled-button">Lihat Dashboard</a>
-                </div>
-            </div>
-          </div>
-          <!-- // Item -->
+        <div class="" id ="produk">
+          <!-- Form -->
+            <div class = "d-flex container p-5 m-5">
+            <div class = "col-3"></div>
+            <div class = "col-6">
+            <form action="/category-store" method="post">
+            @csrf
+            <h4 style="color:green">CAEGORIES</h4>
 
-          <!-- Item -->
-                    <div class="item item-1">
-            <div class="img-fill">
-                <div class="text-content">
-                  <h6>Hallo. Selamat Datang</h6>
-                  <h4>Ini Tugasnya<br> {{$namamhs}}</h4>
-                  <p>{{$deskripsi}}</p>
-                  <a href="{{url('category')}}" class="filled-button">Lihat Dashboard</a>
-                </div>
+            <label style="color:green" for="">BOYBAND</label>
+            <input type="text" name="nama_kategori" class="form-control">
+            <label style="color:green" for="">GIRLBAND</label>
+            <input type="text" name="kode" class="form-control">
+            <label style="color:green" for="">BOYBAND</label>
+            <input type="text" name="nama_kategori" class="form-control">
+            <label style="color:green" for="">SOLO</label>
+            <input type="text" name="kode" class="form-control">
+            <br>
+         
+            <input type="submit" value="Simpan" class="btn btn-primary">
+            </form>
             </div>
-          </div>
-          <!-- // Item -->
-      
+            <div class = "col-3"></div>
+            </div>
+          <!-- Form -->
         </div>
     </div>
+
 
     <!-- Footer Starts Here -->
     <footer>
@@ -150,27 +146,27 @@ https://templatemo.com/tm-545-finance-business
               <li><a rel="nofollow" href="https://fb.com/templatemo" target="_blank"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-behance"></i></a></li>
             </ul>
           </div>
           <div class="col-md-3 footer-item">
             <h4>Useful Links</h4>
             <ul class="menu-list">
-              <li><a href="#">Vivamus ut tellus mi</a></li>
-              <li><a href="#">Nulla nec cursus elit</a></li>
-              <li><a href="#">Vulputate sed nec</a></li>
-              <li><a href="#">Cursus augue hasellus</a></li>
-              <li><a href="#">Lacinia ac sapien</a></li>
+              <li><a href="#">CATEGORIES</a></li>
+              <li><a href="#">GROUP</a></li>
+              <li><a href="#">ALBUM</a></li>
+              <li><a href="#">LIGHT STICK</a></li>
+              <li><a href="#">PHOTOCARD</a></li>
+              <li><a href="#">HOODIE</a></li>
             </ul>
           </div>
           <div class="col-md-3 footer-item">
             <h4>Additional Pages</h4>
             <ul class="menu-list">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">How We Work</a></li>
-              <li><a href="#">Quick Support</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">SHOP DETAIL</a></li>
+              <li><a href="#">PAGES</a></li>
+              <li><a href="#">CONTACT</a></li>
             </ul>
           </div>
           <div class="col-md-3 footer-item last-item">

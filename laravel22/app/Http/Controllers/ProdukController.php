@@ -12,7 +12,10 @@ class ProdukController extends Controller
     public function index()
     {
         $namamhs = "Septiani Sari";
-        $deskripsi = "Saya adalah mahasiswi semester 6 jurusan Rekayasa Perangkat Lunak di INSTITUT TEKNOLOGI TELKOM PURWOKERTO yang sedang Mengikuti Program Studi Independen di PT. Arkatama Multi Solusindo Path Fullstack Web Development. Saya memiliki cita cita menjadi seorang dosen di salah satu universitas negeri. Saya memiliki hobby memasak.";
+        $deskripsi = "Saya adalah mahasiswi semester 6 jurusan Rekayasa Perangkat Lunak di INSTITUT TEKNOLOGI TELKOM 
+        PURWOKERTO yang sedang Mengikuti Program Studi Independen di PT. Arkatama Multi Solusindo Path Fullstack Web 
+        Development. Saya memiliki cita cita menjadi seorang dosen di salah satu universitas negeri. 
+        Saya memiliki hobby memasak.";
         $nama = [
             'Laptop',
             'PC',
@@ -20,7 +23,6 @@ class ProdukController extends Controller
             'Flash Disk',
             'Mouse'
     ];
-
 
     return view ('tugaspert23.landing', compact('namamhs', 'deskripsi' ));
     return view ('master.product', compact('nama' ));
