@@ -81,15 +81,15 @@ https://templatemo.com/tm-545-finance-business
                 <button class="btn btn-transparent dropdown-toggle nav-link" style="color: white;outline:none; background-color: transparent" type="button" data-toggle="dropdown">Dashboard
                 <span class=" caret"></span></button>
                 <ul class="dropdown-menu">
-                <li><a style="color:greenyellow" href="{{url('category')}}">CATEGORIES</a></li>
-                  <li><a style="color:greenyellow" href="{{url('dproduk')}}">GROUP</a></li>
-                  <li><a style="color:greenyellow" href="{{url('grup')}}"> ALBUM</a></li>
+                <li><a style="color:greenyellow" href="{{url('category')}}">DASHBOARD</a></li>
+                  <li><a style="color:greenyellow" href="{{url('dproduk')}}">ABOUT US</a></li>
+                  <li><a style="color:greenyellow" href="{{url('grup')}}"> OUR SERVICES</a></li>
                 </ul>
               </div>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="about.html">FAQ</a>
+                <a class="nav-link" href="about.html">CONTACT US</a>
               </li>  
               <li class="nav-item">
                 <a class="nav-link" href="services.html">HELP</a>
@@ -114,6 +114,18 @@ https://templatemo.com/tm-545-finance-business
             <form action="/category-store" method="post">
             @csrf
             <h4 style="color:green">CAEGORIES</h4>
+
+            @if ($errors->any())
+              <div class="alert alert-primary mb-3 m-auto" style="width: 32rem;" role="alert">
+                <ul>
+                  @foreach ($errors->all() as $e)
+                    <li>
+                      {{$e}}
+                    </li>
+                  @endforeach
+                </ul>
+              </div>
+            @endif
 
             <label style="color:green" for="">BOYBAND</label>
             <input type="text" name="nama_kategori" class="form-control">

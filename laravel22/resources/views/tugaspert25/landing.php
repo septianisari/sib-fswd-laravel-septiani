@@ -71,16 +71,21 @@ https://templatemo.com/tm-545-finance-business
             <li class="nav-item">
                 <a class="nav-link" href="{{url('lending')}}">HOME</a>
               </li>  
+              
             @auth
             <li class="nav-item active">
               <div class="dropdown">
-                <button class="btn btn-transparent dropdown-toggle nav-link" style="color: white;outline:none; background-color: transparent" type="button" data-toggle="dropdown">Dashboard
+                <button class="btn btn-transparent dropdown-toggle nav-link" style="color: white;outline:none; 
+                background-color: transparent" type="button" data-toggle="dropdown">Dashboard
                 <span class=" caret"></span></button>
                 <ul class="dropdown-menu">
-                  <li><a style="color:greenyellow" href="{{url('category')}}">SHOP</a></li>
-                  <li><a style="color:greenyellow" href="{{url('dproduk')}}">SHOP DETAIL</a></li>
-                  <li><a style="color:greenyellow" href="{{url('grup')}}"> PAGES</a></li>
-                  <li><a style="color:greenyellow" href="{{url('pengguna')}}">CONTACT</a></li>
+                  <li><a style="color:greenyellow" href="{{url('category')}}">CATEGORIES</a></li>
+                  <li><a style="color:greenyellow" href="{{url('dproduk')}}">GROUP</a></li>
+                  <li><a style="color:greenyellow" href="{{url('grup')}}"> ALAT ELEKTRONIK</a></li>
+                  <li><a style="color:greenyellow" href="{{url('pengguna')}}">KENDARAAN</a></li>
+                  <li><a style="color:greenyellow" href="{{url('pengguna')}}">FASHION</a></li>
+                  <li><a style="color:greenyellow" href="{{url('pengguna')}}">ALAT TULIS KANTOR</a></li>
+                  <li><a style="color:greenyellow" href="{{url('pengguna')}}">KEBUTUHAN POKOK</a></li>
                 </ul>
               </div>
               </li>

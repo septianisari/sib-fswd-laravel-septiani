@@ -10,18 +10,30 @@ class GrupController extends Controller
     public function index() {
 
         $grup= Grup::all();
-        return view ('tugaspert24.grup', compact('grup'));
+        return view ('tugaske24.grup', compact('grup'));
     } 
 
     public function create() {
         
-        return view ('tugaspert24.grup_create');
+        return view ('tugaske24.grup_create');
     } 
 
     public function store(Request $request) {
         
+        $validator = Validator::make($request->all(), [
+            'name_user' => 'required|min:3' ,
+            'status' => 'required|min:3',
+          
+        ]);
+
+
+        if($validator->fails()){
+            return back()->withErrors($validator);
+        }
+
+        
         $grup= Grup::create([
-            'nama_pengguna' => $request -> nama_pengguna,
+            'name_user' => $request -> name_user,
             'status' => $request -> status,
             
         ]);
@@ -33,13 +45,24 @@ class GrupController extends Controller
 
         $grup= Grup::where('id', $id)->first();
         
-        return view ('tugaspert24.grup_edit', compact('grup'));
+        return view ('tugaske24.grup_edit', compact('grup'));
     } 
 
     public function update(Request $request) {
 
+        $validator = Validator::make($request->all(), [
+            'name_user' => 'required|min:3' ,
+            'status' => 'required|min:3',
+          
+        ]);
+
+
+        if($validator->fails()){
+            return back()->withErrors($validator);
+        }
+
         $grup= Grup::find($request->id)->update([
-            'nama_pengguna' => $request -> nama_pengguna,
+            'name_user' => $request -> name_user,
             'status' => $request -> status,
         ]);
        
